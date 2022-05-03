@@ -23,6 +23,10 @@ public class Dolphin extends Actor
         {
             move(2);
         }
-        // Add your action code here.
+        
+        if(isTouching(Fish.class))
+        {
+            removeTouching(Fish.class);
+        }// Add your action code here.
     }
 }
