@@ -24,9 +24,16 @@ public class Dolphin extends Actor
             move(2);
         }
         
+        eat();
+    }
+    
+    public void eat()
+    {
         if(isTouching(Fish.class))
         {
             removeTouching(Fish.class);
-        }// Add your action code here.
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnFish();
+        }
     }
 }

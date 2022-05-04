@@ -20,8 +20,15 @@ public class MyWorld extends World
         Dolphin d = new Dolphin();
         addObject(d, 300, 350);
         
-        
+        spawnFish();
+
+    }
+    
+    public void spawnFish()
+    {
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
         Fish fish = new Fish();
-        addObject(fish,300, 0);
+        addObject(fish,x, y);
     }
 }
