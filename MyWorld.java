@@ -8,6 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
+    public int score = 0;
+    
+    public Label scoreLabel = new Label(0, 80);
 
     /**
      * Constructor for objects of class MyWorld.
@@ -16,11 +19,13 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(600, 400, 1, false); 
         Dolphin d = new Dolphin();
         addObject(d, 300, 350);
         
+        addObject(scoreLabel, 50, 50);
         spawnFish();
+        
 
     }
     
@@ -30,5 +35,17 @@ public class MyWorld extends World
         int y = 0;
         Fish fish = new Fish();
         addObject(fish,x, y);
+    }
+    
+    public void increaseScore()
+    {
+        score++;
+        scoreLabel.setValue(score);
+    }
+    
+    public void gameOver()
+    {
+        Label gameOverLabel = new Label("Game Over!", 100);
+        addObject(gameOverLabel, 300, 200);
     }
 }
