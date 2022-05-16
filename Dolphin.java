@@ -30,6 +30,7 @@ public class Dolphin extends Actor
     {
         if(isTouching(Fish.class))
         {
+            Greenfoot.playSound("S_coeruleoalba_whistles_short.mp3");
             removeTouching(Fish.class);
             MyWorld world = (MyWorld) getWorld();
             world.increaseScore();
