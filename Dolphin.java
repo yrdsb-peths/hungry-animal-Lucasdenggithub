@@ -12,6 +12,26 @@ public class Dolphin extends Actor
      * Act - do whatever the Dolphin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    GreenfootImage[] idle = new GreenfootImage[8];
+    
+    public Dolphin()
+    {
+        for(int i = 0; i < idle.length; i++)
+        {
+            idle[i] = new GreenfootImage("images/ezgif-4-c0531ed579-gif-104x73-sprite-png/idle" + i + ".png");
+        }
+        setImage(idle[0]);
+    }
+    
+    int imageIndex = 0;
+    public void animateDolphin()
+    {
+        setImage(idle[imageIndex]);
+        imageIndex = (imageIndex + 1) % idle.length;
+        
+    }
+    
+    
     public void act()
     {
         if(Greenfoot.isKeyDown("a"))
@@ -24,6 +44,8 @@ public class Dolphin extends Actor
         }
         
         eat();
+        
+        animateDolphin();
     }
     
     public void eat()
