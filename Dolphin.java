@@ -12,7 +12,7 @@ public class Dolphin extends Actor
      * Act - do whatever the Dolphin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    GreenfootImage[] idle = new GreenfootImage[8];
+    GreenfootImage[] idle = new GreenfootImage[6];
     
     public Dolphin()
     {
