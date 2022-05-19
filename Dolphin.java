@@ -18,7 +18,7 @@ public class Dolphin extends Actor
     {
         for(int i = 0; i < idle.length; i++)
         {
-            idle[i] = new GreenfootImage("images/dolphin_idle/idle" + i + ".png");
+            idle[i] = new GreenfootImage("images/dolphin_idle/idle" + i + ".png.png");
         }
         setImage(idle[0]);
     }
