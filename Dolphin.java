@@ -64,12 +64,12 @@ public class Dolphin extends Actor
     {
         if(Greenfoot.isKeyDown("a"))
         {
-            move(-2);
+            move(-5);
             facing = "left";
         }
         if(Greenfoot.isKeyDown("d"))
         {
-            move(2);
+            move(5);
             facing = "right";
         }
         
